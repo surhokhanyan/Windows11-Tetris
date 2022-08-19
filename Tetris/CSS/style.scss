@@ -1,0 +1,79 @@
+// Import mixins and variables files
+@import "variables";
+@import "mixins";
+
+//Delete default settings
+*{
+    margin: $zero;
+    padding: $zero;
+    box-sizing: border-box;
+}
+
+// Container style start
+#containerTetris{
+    @include size(100%, 100vh);
+    background: url(IMG/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flexCenter();
+    position: relative;
+    #mainTetris{
+        @include size(930px, 884px);
+        background-color: $tetrisBg;
+        border: 8px solid $border;
+        border-radius: 20px ;
+        @include flexAround();
+        #menu{
+            @include size(400px, 800px);
+            @include flDownAround();
+            align-items: flex-start;
+            p{
+                @include size(400px, 45px)
+                font-size: 40px;
+                font-weight: bold;
+                color: $border;
+                &:nth-child(2){
+                    @include size(200px, 200px);
+                    canvas{
+                        @include size(200px, 200px);
+                        border: 2px solid $border;
+                        border-radius: 10px;
+                    }
+                }
+                span{
+                    color: $white;
+                }
+            }
+        }
+        #canvas{
+            @include size(404px, 804px);
+            background: url(IMG/image-asset.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border: 2px solid $border;
+            border-radius: 10px;
+            box-shadow: 0 0 15px $black;
+        }
+    }
+    #close{
+        @include size(60px, 60px);
+        @include flexCenter();
+        transition: .2s;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover{
+            background-color: $red;
+        }
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        a{
+            font-size: 50px;
+            color: $white;
+            margin-bottom: 10%;
+            text-decoration: none;
+        }
+    }
+}

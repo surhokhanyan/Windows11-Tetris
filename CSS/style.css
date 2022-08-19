@@ -1,0 +1,2266 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+#powerWindows {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+}
+
+#powerWindows i {
+  font-size: 150px;
+  color: #4C4C4C;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
+}
+
+#powerWindows i:hover {
+  color: blue;
+}
+
+#loading {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+  display: none;
+}
+
+#loading #loadingMain {
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#loading #loadingMain img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#loading #loadingMain #loadingAnimation {
+  width: 70px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#loading #loadingMain #loadingAnimation .loader {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  -webkit-animation: rotate 3.2s linear infinite;
+          animation: rotate 3.2s linear infinite;
+}
+
+#loading #loadingMain #loadingAnimation .loader:nth-child(1) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+#loading #loadingMain #loadingAnimation .loader:nth-child(2) {
+  -webkit-animation-delay: 0.30s;
+          animation-delay: 0.30s;
+}
+
+#loading #loadingMain #loadingAnimation .loader:nth-child(3) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+#loading #loadingMain #loadingAnimation .loader:nth-child(4) {
+  -webkit-animation-delay: 0.60s;
+          animation-delay: 0.60s;
+}
+
+#loading #loadingMain #loadingAnimation .loader:nth-child(5) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+#loading #loadingMain #loadingAnimation .loader:nth-child(6) {
+  -webkit-animation-delay: 0.90s;
+          animation-delay: 0.90s;
+}
+
+#loading #loadingMain #loadingAnimation .loader .loaderElement {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  top: 25px;
+}
+
+@-webkit-keyframes rotate {
+  30% {
+    -webkit-transform: rotate(220deg);
+            transform: rotate(220deg);
+  }
+  40% {
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+  75% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+    opacity: 1;
+  }
+  76% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  30% {
+    -webkit-transform: rotate(220deg);
+            transform: rotate(220deg);
+  }
+  40% {
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+  75% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+    opacity: 1;
+  }
+  76% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+
+#logIn {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(IMG/login.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+#logIn #loginClock {
+  width: 400px;
+  height: 200px;
+  margin-bottom: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#logIn #loginClock p {
+  width: 180px;
+  height: 200px;
+  line-height: 200px;
+  text-align: start;
+  color: white;
+  font-size: 150px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+#logIn #loginClock p:nth-child(1) {
+  text-align: end;
+}
+
+#logIn #loginClock p:nth-child(2) {
+  width: 20px;
+  font-size: 120px;
+  margin-right: 10px;
+}
+
+#logIn #loginClock p:nth-child(3) {
+  text-align: left;
+}
+
+#password {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(IMG/login.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+#password #passwordBG {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.899);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#password #passwordBG #passwordMain {
+  width: 600px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#password #passwordBG #passwordMain #passwordMainUp {
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#password #passwordBG #passwordMain #passwordMainUp img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#password #passwordBG #passwordMain #passwordMainUp p {
+  font-size: 36px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+#password #passwordBG #passwordMain input {
+  width: 300px;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding-left: 10px;
+  color: white;
+  background-color: #4C4C4C;
+  border-bottom: 2px solid #DB9EE5;
+  border-radius: 5px;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  background: url(IMG/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  display: none;
+}
+
+#container #bottomMenu {
+  width: 100%;
+  height: 50px;
+  background-color: #292929;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#container #bottomMenu #widgets {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#container #bottomMenu #widgets:hover {
+  background-color: #5e5e5e9d;
+}
+
+#container #bottomMenu #widgets img {
+  width: 65%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 5px;
+}
+
+#container #bottomMenu #start {
+  width: 55%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 9999;
+}
+
+#container #bottomMenu #start .items {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 5px;
+  border-radius: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  position: relative;
+}
+
+#container #bottomMenu #start .items:hover {
+  background-color: #5e5e5e9d;
+}
+
+#container #bottomMenu #start .items img {
+  width: 65%;
+  height: auto;
+}
+
+#container #bottomMenu #start #winStartOpen {
+  width: 645px;
+  height: 730px;
+  background-color: #2B2B2B;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
+  border: 0.5px solid #424344;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 65px;
+  display: none;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenSearch {
+  width: 645px;
+  height: 73px;
+  border-radius: 10px 10px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenSearch #winSearch {
+  width: 578px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenSearch #winSearch input {
+  width: 100%;
+  height: 40px;
+  border: 0.5px solid #424344;
+  outline: none;
+  background-color: #1E2225;
+  border-radius: 5px;
+  border-bottom: 2px solid #DB9EE5;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #CDCDCD;
+  padding-left: 45px;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenSearch #winSearch i {
+  color: #CDCDCD;
+  font-size: 14px;
+  position: absolute;
+  left: 17px;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain {
+  width: 577px;
+  height: 535px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainUp {
+  width: 577px;
+  height: 290px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainUp #winStartOpenMainUpHead {
+  width: 513px;
+  height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainUp #winStartOpenMainUpHead p {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainUp #winStartOpenMainUpHead button {
+  width: 81px;
+  height: 26px;
+  background-color: #363737;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: none;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 12px;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainUp #winStartOpenMainUpApps {
+  width: 100%;
+  height: 258px;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  overflow-y: scroll;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainUp #winStartOpenMainUpApps::-webkit-scrollbar {
+  display: none;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainUp #winStartOpenMainUpApps .apps {
+  width: 96px;
+  height: 86px;
+  border-radius: 5px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainUp #winStartOpenMainUpApps .apps:hover {
+  background-color: #363737;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainUp #winStartOpenMainUpApps .apps img {
+  width: 33px;
+  height: 33px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainUp #winStartOpenMainUpApps .apps p {
+  font-size: 12px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainDown {
+  width: 577px;
+  height: 237px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainDown #winStartOpenMainDownHead {
+  width: 513px;
+  height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainDown #winStartOpenMainDownHead p {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainDown #winStartOpenMainDownHead button {
+  width: 81px;
+  height: 26px;
+  background-color: #363737;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: none;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 12px;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainDown #winStartOpenMainDownApps {
+  width: 537px;
+  height: 199px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainDown #winStartOpenMainDownApps .downApp {
+  width: 268px;
+  height: 58px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-radius: 5px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainDown #winStartOpenMainDownApps .downApp:hover {
+  background-color: #363737;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainDown #winStartOpenMainDownApps .downApp .downAppPhoto {
+  width: 58px;
+  height: 58px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainDown #winStartOpenMainDownApps .downApp .downAppPhoto img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainDown #winStartOpenMainDownApps .downApp .downAppInfo {
+  width: 200px;
+  height: 58px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainDown #winStartOpenMainDownApps .downApp .downAppInfo h3 {
+  font-size: 14px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenMain #winStartOpenMainDown #winStartOpenMainDownApps .downApp .downAppInfo p {
+  font-size: 12px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom {
+  width: 645px;
+  height: 65px;
+  background-color: #1E2225;
+  border-top: 0.5px solid #424344;
+  border-radius: 0 0 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain {
+  width: 514px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainLeft {
+  width: 168px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 5px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainLeft:hover {
+  background-color: #5a5a5ab0;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainLeft img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainLeft p {
+  color: #CDCDCD;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainPower {
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  position: relative;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainPower:hover {
+  background-color: #5a5a5ab0;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainPower i {
+  font-size: 18px;
+  color: #CDCDCD;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainPower #powerOpen {
+  width: 127px;
+  height: 102px;
+  border-radius: 5px;
+  background-color: #2B2C2C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 55px;
+  -webkit-box-shadow: 0 4px 5px black;
+          box-shadow: 0 4px 5px black;
+  display: none;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainPower #powerOpen .powerOpenButtons {
+  width: 119px;
+  height: 30px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: default;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainPower #powerOpen .powerOpenButtons:hover {
+  background-color: #363737;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainPower #powerOpen .powerOpenButtons .powerOpenButtonsIcon {
+  width: 40px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainPower #powerOpen .powerOpenButtons .powerOpenButtonsIcon i {
+  font-size: 18px;
+  color: #CDCDCD;
+}
+
+#container #bottomMenu #start #winStartOpen #winStartOpenBottom #winStartOpenBottomMain #winStartOpenBottomMainPower #powerOpen .powerOpenButtons p {
+  font-size: 14px;
+  color: #CDCDCD;
+  font-family: "Open Sans", sans-serif;
+}
+
+#container #bottomMenu #start #searchStartOpen {
+  width: 776px;
+  height: 726px;
+  background-color: #2B2B2B;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
+  border: 0.5px solid #424344;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 65px;
+  display: none;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenSearch {
+  width: 728px;
+  height: 82px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenSearch #winSearchSecond {
+  width: 728px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenSearch #winSearchSecond input {
+  width: 100%;
+  height: 40px;
+  border: 0.5px solid #424344;
+  outline: none;
+  background-color: #1E2225;
+  border-radius: 5px;
+  border-bottom: 2px solid #DB9EE5;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #CDCDCD;
+  padding-left: 45px;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenSearch #winSearchSecond i {
+  color: #CDCDCD;
+  font-size: 14px;
+  position: absolute;
+  left: 17px;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain {
+  width: 728px;
+  height: 626px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainUp {
+  width: 728px;
+  height: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainUp p {
+  font-size: 12px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  margin-top: 5px;
+  line-height: 7px;
+  text-align: start;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainUp p:nth-child(1) {
+  width: 307px;
+  height: 14px;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainUp p:nth-child(2) {
+  width: 384px;
+  height: 14px;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainUp i {
+  width: 38px;
+  height: 14px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown {
+  width: 728px;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain {
+  width: 728px;
+  height: 502px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainLeft {
+  width: 300px;
+  height: 502px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5px;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainLeft .searchApp {
+  width: 300px;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transition: .2s;
+  transition: .2s;
+  border-radius: 5px;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainLeft .searchApp:hover {
+  background-color: #363737;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainLeft .searchAppLogo {
+  width: 46px;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainLeft .searchAppLogo img {
+  width: 25px;
+  height: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainLeft p {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight {
+  width: 422px;
+  height: 391px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightUp {
+  width: 422px;
+  height: 147px;
+  background-color: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-radius: 10px;
+  padding-left: 12px;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightUp #searchStartOpenMainDownMainRightUpMain {
+  width: 325px;
+  height: 115px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightUp #searchStartOpenMainDownMainRightUpMain .settings {
+  width: 115px;
+  height: 34px;
+  background-color: #404040;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 15px;
+  line-height: 34px;
+  border-radius: 15px;
+  margin-right: 10px;
+  color: #CDCDCD;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  cursor: defaultq;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightUp #searchStartOpenMainDownMainRightUpMain .settings:nth-child(2) {
+  width: 120px;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightUp #searchStartOpenMainDownMainRightUpMain .settings:nth-child(3) {
+  width: 152px;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightUp #searchStartOpenMainDownMainRightUpMain .settings:nth-child(4) {
+  width: 124px;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightDown {
+  width: 422px;
+  height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightDown p {
+  font-size: 12px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  margin-top: 5px;
+  line-height: 7px;
+  text-align: start;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightDown #searchStartOpenMainDownMainRightDownMain {
+  width: 422px;
+  height: 194px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightDown #searchStartOpenMainDownMainRightDownMain .searchApp {
+  width: 136px;
+  height: 94px;
+  background-color: #353535;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightDown #searchStartOpenMainDownMainRightDownMain .searchApp:hover {
+  background-color: #272727;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightDown #searchStartOpenMainDownMainRightDownMain .searchApp img {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#container #bottomMenu #start #searchStartOpen #searchStartOpenMain #searchStartOpenMainDown #searchStartOpenMainDownMain #searchStartOpenMainDownMainRight #searchStartOpenMainDownMainRightDown #searchStartOpenMainDownMainRightDownMain .searchApp p {
+  font-size: 10px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+#container #bottomMenu #time {
+  width: 220px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #bottomMenu #time #hiddenIcons {
+  width: 20px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#container #bottomMenu #time #hiddenIcons:hover {
+  background-color: #5e5e5e9d;
+}
+
+#container #bottomMenu #time #hiddenIcons i {
+  font-size: 16px;
+  color: white;
+}
+
+#container #bottomMenu #time #lang {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-radius: 5px;
+}
+
+#container #bottomMenu #time #lang:hover {
+  background-color: #5e5e5e9d;
+}
+
+#container #bottomMenu #time #lang p {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+#container #bottomMenu #time #wifi {
+  width: 80px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-radius: 5px;
+}
+
+#container #bottomMenu #time #wifi:hover {
+  background-color: #5e5e5e9d;
+}
+
+#container #bottomMenu #time #wifi i {
+  font-size: 12px;
+  color: white;
+}
+
+#container #bottomMenu #time #calendar {
+  width: 70px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-radius: 5px;
+}
+
+#container #bottomMenu #time #calendar:hover {
+  background-color: #5e5e5e9d;
+}
+
+#container #bottomMenu #time #calendar #clock {
+  width: 60px;
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 2px;
+}
+
+#container #bottomMenu #time #calendar #clock p {
+  font-size: 12px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+#container #bottomMenu #time #calendar #clock p:nth-child(1), #container #bottomMenu #time #calendar #clock p:nth-child(3) {
+  width: 10px;
+  height: 15px;
+  line-height: 15px;
+}
+
+#container #bottomMenu #time #calendar #clock p:nth-child(2) {
+  margin-left: 4px;
+  margin-right: 1px;
+}
+
+#container #bottomMenu #time #calendar #calendarPlace {
+  width: 60px;
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#container #bottomMenu #time #calendar #calendarPlace p {
+  font-size: 12px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+#container #widgetsHover {
+  width: 39.6875%;
+  height: 91vh;
+  background-color: #424141ef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  border-radius: 10px;
+  display: none;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  z-index: 999;
+}
+
+#container #widgetsHover #widgetsHoverMain {
+  width: 480px;
+  height: 225px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #widgetsHover #widgetsHoverMain img {
+  width: 50px;
+  height: auto;
+  -webkit-box-shadow: 0 4px 10px black;
+          box-shadow: 0 4px 10px black;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 5px;
+}
+
+#container #widgetsHover #widgetsHoverMain #widgetsHoverMainInfo {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #widgetsHover #widgetsHoverMain #widgetsHoverMainInfo h3 {
+  font-family: "Open Sans", sans-serif;
+  color: #EDEDED;
+  font-size: 26px;
+}
+
+#container #widgetsHover #widgetsHoverMain #widgetsHoverMainInfo p {
+  text-align: center;
+  font-size: 13px;
+  color: #EDEDED;
+  font-family: "Open Sans", sans-serif;
+}
+
+#container #widgetsHover #widgetsHoverMain button {
+  width: 150px;
+  height: 33px;
+  background-color: #4C4C4C;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+
+#container #widgetsHover #widgetsHoverMain button:hover {
+  background-color: #5a5a5a;
+}
+
+#container .screenApp {
+  width: 76px;
+  height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+
+#container .screenApp img {
+  width: 40px;
+  height: 35px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#container .screenApp p {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-weight: normal;
+}
+
+#container #browser {
+  width: 100%;
+  height: 95vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 0;
+  display: none;
+  z-index: 99;
+}
+
+#container #browser #browserTop {
+  width: 100%;
+  height: 85px;
+  background-color: #1C1B22;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#container #browser #browserTop #browserTopPage {
+  margin-left: 8px;
+  width: 98.95%;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #browser #browserTop #browserTopPage #browserTopPageFirst {
+  width: 11.684%;
+  height: 36px;
+  background-color: #35343A;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container #browser #browserTop #browserTopPage #browserTopPageFirst #browserTopPageFirstMain {
+  width: 93.25%;
+  height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #browser #browserTop #browserTopPage #browserTopPageFirst #browserTopPageFirstMain #browserTopPageFirstMainLeft {
+  width: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#container #browser #browserTop #browserTopPage #browserTopPageFirst #browserTopPageFirstMain #browserTopPageFirstMainLeft #browserTopPageFirstMainLeftPhoto {
+  width: 18px;
+  height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container #browser #browserTop #browserTopPage #browserTopPageFirst #browserTopPageFirstMain #browserTopPageFirstMainLeft #browserTopPageFirstMainLeftPhoto img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#container #browser #browserTop #browserTopPage #browserTopPageFirst #browserTopPageFirstMain #browserTopPageFirstMainLeft #browserTopPageFirstMainLeftInfo {
+  width: 85%;
+  height: 100%;
+  margin-left: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#container #browser #browserTop #browserTopPage #browserTopPageFirst #browserTopPageFirstMain #browserTopPageFirstMainLeft #browserTopPageFirstMainLeftInfo p {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+#container #browser #browserTop #browserTopPage #browserTopPageFirst #browserTopPageFirstMain #browserTopPageFirstMainClose {
+  width: 10px;
+  height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+#container #browser #browserTop #browserTopPage #browserTopPageFirst #browserTopPageFirstMain #browserTopPageFirstMainClose p {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+#container #browser #browserTop #browserTopCloseMinuse {
+  width: 104px;
+  height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #browser #browserTop #browserTopCloseMinuse i {
+  font-size: 13px;
+  color: white;
+  cursor: pointer;
+}
+
+#container #browser #browserTop #browserTopSearch {
+  width: 100%;
+  height: 42px;
+  background-color: #2B2A33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #browser #browserTop #browserTopSearch #browserTopSearchLeft {
+  width: 120px;
+  height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container #browser #browserTop #browserTopSearch #browserTopSearchLeft #browserTopSearchLeftMain {
+  width: 88px;
+  height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #browser #browserTop #browserTopSearch #browserTopSearchLeft #browserTopSearchLeftMain i {
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+#container #browser #browserTop #browserTopSearch input {
+  width: 74.12%;
+  height: 32px;
+  background-color: #1C1B22;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 1%;
+  color: #929298;
+  font-size: 14px;
+  border: none;
+}
+
+#container #browser #browserTop #browserTopSearch #browserTopSearchRight {
+  width: 157px;
+  height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container #browser #browserTop #browserTopSearch #browserTopSearchRight #browserTopSearchRightMain {
+  width: 122px;
+  height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #browser #browserTop #browserTopSearch #browserTopSearchRight #browserTopSearchRightMain i {
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#container #browser #browserMain {
+  width: 100%;
+  height: 91%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container #browser #browserMain img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#shutDown {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+#shutDown #shutDownMain {
+  width: 200px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#shutDown #shutDownMain .downLoader {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  -webkit-animation: rotate 3.2s linear infinite;
+          animation: rotate 3.2s linear infinite;
+}
+
+#shutDown #shutDownMain .downLoader:nth-child(1) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+#shutDown #shutDownMain .downLoader:nth-child(2) {
+  -webkit-animation-delay: 0.30s;
+          animation-delay: 0.30s;
+}
+
+#shutDown #shutDownMain .downLoader:nth-child(3) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+#shutDown #shutDownMain .downLoader:nth-child(4) {
+  -webkit-animation-delay: 0.60s;
+          animation-delay: 0.60s;
+}
+
+#shutDown #shutDownMain .downLoader:nth-child(5) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+#shutDown #shutDownMain .downLoader:nth-child(6) {
+  -webkit-animation-delay: 0.90s;
+          animation-delay: 0.90s;
+}
+
+#shutDown #shutDownMain .downLoader .downLoaderElement {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  top: 25px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#containerTetris {
+  width: 100%;
+  height: 100vh;
+  background: url(../Tetris/CSS/IMG/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+}
+
+#containerTetris #mainTetris {
+  width: 930px;
+  height: 884px;
+  background-color: #00234983;
+  border: 8px solid #64E0F2;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#containerTetris #mainTetris #menu {
+  width: 400px;
+  height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#containerTetris #mainTetris #menu p {
+  width: 400px;
+  height: 45px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #64E0F2;
+}
+
+#containerTetris #mainTetris #menu p:nth-child(2) {
+  width: 200px;
+  height: 200px;
+}
+
+#containerTetris #mainTetris #menu p:nth-child(2) canvas {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #64E0F2;
+  border-radius: 10px;
+}
+
+#containerTetris #mainTetris #menu p span {
+  color: white;
+}
+
+#containerTetris #mainTetris #canvas {
+  width: 404px;
+  height: 804px;
+  background: url(../Tetris/CSS/IMG/image-asset.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid #64E0F2;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 15px black;
+          box-shadow: 0 0 15px black;
+}
+
+#containerTetris #close {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .2s;
+  transition: .2s;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+#containerTetris #close:hover {
+  background-color: red;
+}
+
+#containerTetris #close p {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 10%;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */

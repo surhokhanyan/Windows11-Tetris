@@ -1,0 +1,1064 @@
+// Import mixins and variables files
+@import "variables";
+@import "mixins";
+
+// Delete default settings
+*{
+    margin: $zero;
+    padding: $zero;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $black;
+}
+//Power windows
+#powerWindows{
+    @include size(100%, 100vh);
+    @include flexCenter();
+    background-color: $black;
+    i{
+        font-size: 150px;
+        color: $widgBtnColor;
+        transition: .5s;
+        cursor: pointer;
+        &:hover{
+            color: $blue;
+        }
+    }
+}
+
+//Loading style
+#loading{
+    @include size(100%, 100vh);
+    @include flexCenter();
+    background-color: $black;
+    display: none;
+    #loadingMain{
+        @include size(300px, 300px);
+        @include flDownAround();
+        img{
+            @include size(150px, 150px);
+            object-fit: cover;
+            object-position: center
+        }
+        #loadingAnimation{
+            @include size(70px, 70px);
+            @include flexCenter();
+            position: relative;
+            .loader{
+                @include size(40px, 40px);
+                position: absolute;
+                animation: rotate 3.2s linear infinite;
+                &:nth-child(1){
+                    animation-delay: 0.15s;
+                }
+                &:nth-child(2){
+                    animation-delay: 0.30s;
+                }
+                &:nth-child(3){
+                    animation-delay: 0.45s;
+                }
+                &:nth-child(4){
+                    animation-delay: 0.60s;
+                }
+                &:nth-child(5){
+                    animation-delay: 0.75s;
+                }
+                &:nth-child(6){
+                    animation-delay: 0.90s;
+                }
+                .loaderElement{
+                    @include size(5px, 5px);
+                    border-radius: 50%;
+                    background-color: $white;
+                    position: relative;
+                    top: 25px;
+                }
+            }
+            @keyframes rotate {
+                30%{
+                    transform: rotate(220deg);
+                }
+                40%{
+                    transform: rotate(450deg);
+                }
+                75%{
+                    transform: rotate(720deg);
+                    opacity: 1;
+                }
+                76%{
+                    opacity: 0;
+                }
+                100%{
+                    transform: rotate(0deg);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+//Login style
+#logIn{
+    @include size(100%, 100vh);
+    @include flexCenter();
+    background:url(IMG/login.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+    #loginClock{
+        @include size(400px, 200px);
+        margin-bottom: 25%;
+        @include flexBetween();
+        p{
+            @include size(180px, 200px);
+            line-height: 200px;
+            text-align: start;
+            color: $white;
+            font-size: 150px;
+            font-family: $sans;
+            font-weight: bold;
+            &:nth-child(1){
+                text-align: end;
+            }
+            &:nth-child(2){
+                width: 20px;
+                font-size: 120px;
+                margin-right: 10px;
+            }
+            &:nth-child(3){
+                text-align: left;
+            }
+        }
+    }
+}
+
+//Style for login password
+
+#password{
+    @include size(100%, 100vh);
+    @include flexCenter();
+    background: url(IMG/login.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+    #passwordBG{
+        @include size(100%, 100%);
+        background-color: $loginBg;
+        @include flexCenter();
+        #passwordMain{
+            @include size(600px, 400px);
+            @include flDownAround();
+            #passwordMainUp{
+                @include size(100%, 300px);
+                @include flDownBetween();
+                img{
+                    @include size(250px, 250px);
+                    border-radius: 50%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                p{
+                    font-size: 36px;
+                    color: $white;
+                    font-family: $sans;
+                }
+            }
+            input{
+                @include size(300px, 40px);
+                border: none;
+                outline: none;
+                font-size: 16px;
+                padding-left: 10px;
+                color: $white;
+                background-color: $widgBtnColor;
+                border-bottom: 2px solid $winSearchPink;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+// Container style 
+#container{
+    @include size(100%, 100vh);
+    background: url(IMG/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flexBottom();
+    position: relative;
+    display: none;
+    #bottomMenu{
+        @include size(100%, 50px);
+        background-color: $menu;
+        @include flexBetween();
+        padding-left: 10px;
+        padding-right: 10px;
+        #widgets{
+            @include size(40px, 40px);
+            @include flexCenter();
+            border-radius: 5px;
+            transition: .3s;
+            &:hover{
+                background-color: $widgetHover;
+            }
+            img{
+                @include size(65%,auto);
+                object-fit: cover;
+                object-position: center;
+                border-radius: 5px;
+            }
+        }
+        #start{
+            @include size(55%, 40px);
+            @include flexCenter();
+            z-index: 9999;
+            .items{
+                @include size(40px, 40px);
+                @include flexCenter();
+                margin-right: 5px;
+                border-radius: 5px;
+                transition: .3s;
+                position: relative;
+                &:hover{
+                    background-color: $widgetHover;
+                }
+                img{
+                    @include size(65%, auto);
+                }
+            }
+            #winStartOpen{
+                @include size (645px, 730px);
+                background-color: $winStartBg;
+                border-radius: 10px;
+                box-shadow: 0 0 10px $blackOp;
+                border: 0.5px solid $winStartBorder;
+                @include flDownBetween();
+                position: absolute;
+                bottom: 65px;
+                display: none;
+                #winStartOpenSearch{
+                    @include size(645px, 73px);
+                    border-radius: 10px 10px 0 0 ;
+                    @include flexCenter();
+                    align-items: flex-end;
+                    #winSearch{
+                        @include size(578px, 40px);
+                        @include flexCenter();
+                        position: relative;
+                        input{
+                            @include size(100%, 40px);
+                            border: 0.5px solid $winStartBorder;
+                            outline: none;
+                            background-color: $winStartDown;
+                            border-radius: 5px;
+                            border-bottom: 2px solid $winSearchPink;
+                            font-size: 14px;
+                            font-family: $sans;
+                            color: $winStartColor;
+                            padding-left: 45px;
+                        }
+                        i{
+                            color: $winStartColor;
+                            font-size: 14px;
+                            position: absolute;
+                            left: 17px;
+                        }
+                    }
+                }
+                #winStartOpenMain{
+                    @include size(577px, 535px);
+                    @include flDownBetween();
+                    #winStartOpenMainUp{
+                        @include size(577px, 290px);
+                        @include flDownStart();
+                        #winStartOpenMainUpHead{
+                            @include size(513px, 26px);
+                            @include flexBetween();
+                            p{
+                                font-size: 14px;
+                                color: $white;
+                                font-weight: bold;
+                                font-family: $sans;
+                            }
+                            button{
+                                @include size(81px, 26px);
+                                background-color: $appHover;
+                                @include flexAround();
+                                border: none;
+                                border-radius: 5px;
+                                font-family: $sans;
+                                color: $white;
+                                font-size: 12px;
+                            }
+                        }
+                        #winStartOpenMainUpApps{
+                            @include size(100%, 86*3px);
+                            margin-top: 5px;
+                            @include flexBetween();
+                            flex-wrap: wrap;
+                            align-content: space-between;
+                            overflow-y: scroll;
+                            &::-webkit-scrollbar{
+                                display: none;
+                            }
+                            .apps{
+                                @include size(96px, 86px);
+                                border-radius: 5px;
+                                transition: .2s;
+                                @include flDownCenter();
+                                &:hover{
+                                    background-color: $appHover;
+                                }
+                                img{
+                                    @include size(33px, 33px);
+                                    object-fit: cover;
+                                    object-position: center;
+                                }
+                                p{
+                                    font-size: 12px;
+                                    color: $white;
+                                    font-family: $sans;
+                                    font-weight: bold;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                    #winStartOpenMainDown{
+                        @include size(577px, 237px);
+                        @include flDownBetween();
+                        #winStartOpenMainDownHead{
+                            @include size(513px, 26px);
+                            @include flexBetween();
+                            p{
+                                font-size: 14px;
+                                color: $white;
+                                font-weight: bold;
+                                font-family: $sans;
+                            }
+                            button{
+                                @include size(81px, 26px);
+                                background-color: $appHover;
+                                @include flexAround();
+                                border: none;
+                                border-radius: 5px;
+                                font-family: $sans;
+                                color: $white;
+                                font-size: 12px;
+                            }
+                        }
+                        #winStartOpenMainDownApps{
+                            @include size(537px, 199px);
+                            @include flexBetween();
+                            flex-wrap: wrap;
+                            align-content: space-between;
+                            .downApp{
+                                @include size(268px, 58px);
+                                @include flexCenter();
+                                justify-content: flex-start;
+                                border-radius: 5px;
+                                transition: .2s;
+                                &:hover{
+                                    background-color: $appHover;
+                                }
+                                .downAppPhoto{
+                                    @include size(58px, 58px);
+                                    @include flexCenter();
+                                    img{
+                                        @include size(40px, 40px);
+                                        object-fit: cover;
+                                        object-position: center;
+                                    }
+                                }
+                                .downAppInfo{
+                                    @include size(200px, 58px);
+                                    @include flDownCenter();
+                                    align-items: flex-start;
+                                    h3{
+                                        font-size: 14px;
+                                        color: $white;
+                                        font-family: $sans;
+                                    }
+                                    p{
+                                        font-size: 12px;
+                                        color: $white;
+                                        font-family: $sans;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                #winStartOpenBottom{
+                    @include size (645px, 65px);
+                    background-color: $winStartDown;
+                    border-top: 0.5px solid $winStartBorder;
+                    border-radius:0 0 10px 10px;
+                    @include flexCenter();
+                    #winStartOpenBottomMain{
+                        @include size(514px, 45px);
+                        @include flexBetween();
+                        #winStartOpenBottomMainLeft{
+                            @include size(168px, 45px);
+                            @include flexAround();
+                            border-radius: 5px;
+                            transition: .2s;
+                            &:hover{
+                                background-color: $winStartHover;
+                            }
+                            img{
+                                @include size(32px, 32px);
+                                border-radius: 50%;
+                                object-fit: cover;
+                                object-position: center;
+                            }
+                            p{
+                                color: $winStartColor;
+                                font-family: $sans;
+                                font-size: 12px;
+                                font-weight: bold;
+                            }
+                        }
+                        #winStartOpenBottomMainPower{
+                            @include size(45px, 45px);
+                            @include flexCenter();
+                            border-radius: 5px;
+                            transition: .2s;
+                            position: relative;
+                            &:hover{
+                                background-color: $winStartHover;
+                            }
+                            i{
+                                font-size: 18px;
+                                color: $winStartColor;
+                            }
+                            #powerOpen{
+                                @include size(127px, 102px);
+                                border-radius: 5px;
+                                background-color: $powerBg;
+                                @include flDownCenter();
+                                position: absolute;
+                                bottom: 55px;
+                                box-shadow: 0 4px 5px $black;
+                                display: none;
+                                .powerOpenButtons{
+                                    @include size(119px, 30px);
+                                    border-radius: 5px;
+                                    @include flexCenter();
+                                    justify-content: flex-start;
+                                    transition: .2s;
+                                    cursor: default;
+                                    &:hover{
+                                        background-color: $appHover;
+                                    }
+                                    .powerOpenButtonsIcon{
+                                        @include size(40px, 30px);
+                                        @include flexCenter();
+                                        i{
+                                            font-size: 18px;
+                                            color: $winStartColor;
+                                        }
+                                    }
+                                    p{
+                                        font-size: 14px;
+                                        color: $winStartColor;
+                                        font-family: $sans;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #searchStartOpen{
+                @include size(776px, 726px);
+                background-color: $winStartBg;
+                border-radius: 10px;
+                box-shadow: 0 0 10px $blackOp;
+                border: 0.5px solid $winStartBorder;
+                @include flDownBetween();
+                position: absolute;
+                bottom: 65px;
+                display: none;
+                #searchStartOpenSearch{
+                    @include size(728px, 82px);
+                    @include flexCenter();
+                    align-items: flex-end;
+                    #winSearchSecond{
+                        @include size(728px, 40px);
+                        @include flexCenter();
+                        position: relative;
+                        input{
+                            @include size(100%, 40px);
+                            border: 0.5px solid $winStartBorder;
+                            outline: none;
+                            background-color: $winStartDown;
+                            border-radius: 5px;
+                            border-bottom: 2px solid $winSearchPink;
+                            font-size: 14px;
+                            font-family: $sans;
+                            color: $winStartColor;
+                            padding-left: 45px;
+                        }
+                        i{
+                            color: $winStartColor;
+                            font-size: 14px;
+                            position: absolute;
+                            left: 17px;
+                        }
+                    }
+                }
+                #searchStartOpenMain{
+                    @include size(728px, 626px);
+                    @include flDownBetween();
+                    #searchStartOpenMainUp{
+                        @include size(728px, 14px);
+                        @include flexBetween();
+                        p{
+                            font-size: 12px;
+                            color: $white;
+                            font-family: $sans;
+                            font-weight: bold;
+                            margin-top: 5px;
+                            line-height: 7px;
+                            text-align: start;
+                            &:nth-child(1){
+                                @include size(307px, 14px);
+                            }
+                            &:nth-child(2){
+                                @include size(384px, 14px);
+                            }
+                        }
+                        i{
+                            @include size(38px, 14px);
+                            font-size: 12px;
+                            color: $white; 
+                            text-align: center;
+                        }
+                    }
+                    #searchStartOpenMainDown{
+                        @include size(728px, 600px);
+                        @include flexCenter();
+                        align-items: flex-start;
+                        #searchStartOpenMainDownMain{
+                            @include size(728px, 502px);
+                            @include flexBetween();
+                            align-items: flex-start;
+                            #searchStartOpenMainDownMainLeft{
+                                @include size(300px, 502px);
+                                @include flDownBetween();
+                                border-radius: 5px;
+                                .searchApp{
+                                    @include size(300px, 42px);
+                                    @include flexCenter();
+                                    justify-content: flex-start;
+                                    transition: .2s;
+                                    border-radius: 5px;
+                                    &:hover{
+                                        background-color: $appHover;
+                                    }
+                                }
+                                .searchAppLogo{
+                                    @include size(46px, 42px);
+                                    @include flexCenter();
+                                    img{
+                                        @include size(25px, 25px);
+                                        object-fit: cover;
+                                        object-position: center;
+                                    }
+                                }
+                                p{
+                                    color: $white;
+                                    font-family: $sans;
+                                    font-size: 12px;
+                                }
+                            }
+                            #searchStartOpenMainDownMainRight{
+                                @include size(422px, 391px);
+                                @include flDownBetween();
+                                #searchStartOpenMainDownMainRightUp{
+                                    @include size (422px, 147px);
+                                    background-color: $searchSettings;
+                                    @include flexCenter();
+                                    justify-content: flex-start;
+                                    border-radius: 10px;
+                                    padding-left: 12px;
+                                    #searchStartOpenMainDownMainRightUpMain{
+                                        @include size(325px, 115px);
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        align-items: flex-start;
+                                        justify-content: flex-start;
+                                        align-content: space-between;
+                                        .settings{
+                                            @include size(115px, 34px);
+                                            background-color: $settingsBg;
+                                            @include flexCenter();
+                                            justify-content: flex-start;
+                                            padding-left: 15px;
+                                            line-height: 34px;
+                                            border-radius: 15px;
+                                            margin-right: 10px;
+                                            color: $winStartColor;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            font-family: $sans;
+                                            cursor: defaultq;
+                                            &:nth-child(2){
+                                                width: 120px;
+                                            }
+                                            &:nth-child(3){
+                                                width: 152px;
+                                            }
+                                            &:nth-child(4){
+                                                width: 124px;
+                                            }
+                                        }
+                                    }
+                                }
+                                #searchStartOpenMainDownMainRightDown{
+                                    @include size(422px, 220px);
+                                    @include flDownBetween();
+                                    align-items: flex-start;
+                                    p{
+                                        font-size: 12px;
+                                        color: $white;
+                                        font-family: $sans;
+                                        font-weight: bold;
+                                        margin-top: 5px;
+                                        line-height: 7px;
+                                        text-align: start;
+                                    }
+                                    #searchStartOpenMainDownMainRightDownMain{
+                                        @include size(422px, 194px);
+                                        @include flexBetween();
+                                        flex-wrap: wrap;
+                                        align-content: space-between;
+                                        .searchApp{
+                                            @include size(136px, 94px);
+                                            background-color: $searchSettings;
+                                            border-radius: 5px;
+                                            @include flDownCenter();
+                                            transition: .2s;
+                                            &:hover{
+                                                background-color: $searchSettingsHover;
+                                            }
+                                            img{
+                                                @include size(32px, 32px);
+                                                object-fit: cover;
+                                                object-position: center;
+                                            }
+                                            p{
+                                                font-size: 10px;
+                                                color: $white;
+                                                font-family: $sans;
+                                                font-weight: bold;
+                                                line-height: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #time{
+            @include size(220px, 50px);
+            @include flexBetween();
+            #hiddenIcons{
+                @include size(20px, 50px);
+                @include flexCenter();
+                transition: .3s;
+                &:hover{
+                    background-color: $widgetHover;
+                }
+                i{
+                    font-size: 16px;
+                    color: $white;
+                }
+            }
+            #lang{
+                @include size(40px, 40px);
+                @include flexCenter();
+                transition: .5s;
+                border-radius: 5px;
+                &:hover{
+                    background-color: $widgetHover;
+                }
+                p{
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: $white;
+                    font-family: $sans;
+                }
+            }
+            #wifi{
+                @include size(80px, 40px);
+                @include flexEvenly();
+                transition: .5s;
+                border-radius: 5px;
+                &:hover{
+                    background-color: $widgetHover;
+                }
+                i{
+                    font-size: 12px;
+                    color: $white;
+                }
+            }
+            #calendar{
+                @include size(70px, 40px);
+                @include flDownEvenly();
+                transition: .5s;
+                border-radius: 5px;
+                &:hover{
+                    background-color: $widgetHover;
+                }
+                #clock{
+                    @include size(60px, 15px);
+                    @include flexCenter();
+                    justify-content: flex-end;
+                    padding-right: 2px;
+                    p{
+                        font-size: 12px;
+                        color: $white;
+                        font-family: $sans;
+                        &:nth-child(1), &:nth-child(3){
+                            @include size(10px, 15px);
+                            line-height: 15px;
+                        }
+                        &:nth-child(2){
+                            margin-left: 4px;
+                            margin-right: 1px;
+                        }
+                    }
+                }
+                #calendarPlace{
+                    @include size(60px, 15px);
+                    @include flexCenter();
+                    justify-content: flex-end;
+                    p{
+                        font-size: 12px;
+                        color: $white;
+                        font-family: $sans;
+                    }
+                }
+            }
+        }
+    }
+    #widgetsHover{
+        @include size(39.6875%, 91vh);
+        background-color:$widgetActive;
+        @include flexCenter();
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        border-radius: 10px;
+        display: none;
+        animation-duration: .4s;
+        z-index: 999;
+        #widgetsHoverMain{
+            @include size(480px, 225px);
+            @include flDownBetween();
+            img{
+                @include size(50px, auto);
+                box-shadow: 0 4px 10px $black;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 5px;
+            }
+            #widgetsHoverMainInfo{
+                @include size(100%, 80px);
+                @include flDownBetween();
+                h3{
+                    font-family: $sans;
+                    color: $widgetText;
+                    font-size: 26px;
+                }
+                p{
+                    text-align: center;
+                    font-size: 13px;
+                    color: $widgetText;
+                    font-family: $sans;
+                }
+            }
+            button{
+                @include size(150px, 33px);
+                background-color: $widgBtnColor;
+                border-radius: 5px;
+                border: none;
+                font-size: 14px;
+                color: $white;
+                font-family: $sans;
+                cursor: pointer;
+                &:hover{
+                    background-color: $widgBtnHover;
+                }
+            }
+        }
+    }
+    .screenApp{
+        @include size(76px, 85px);
+        @include flDownEvenly();
+        border-radius: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 6;
+        img{
+            @include size(40px, 35px);
+            object-fit: contain;
+            object-position: center;
+        }
+        p{
+            font-size: 12px;
+            font-family: $sans;
+            color: $white;
+            font-weight: normal;
+        }
+    }
+    #browser{
+        @include size(100%, 95vh);
+        @include flDownBetween();
+        position: absolute;
+        top: 0;
+        display: none;
+        z-index: 99;
+        #browserTop{
+            @include size(100%, 85px);
+            background-color: $browser;
+            @include flDownBetween();
+            align-items: flex-start;
+            #browserTopPage{
+                margin-left: 8px;
+                @include size(98.95%, 36px);
+                @include flexBetween();
+                #browserTopPageFirst{
+                    @include size(11.684%, 36px);
+                    background-color: $browserPageBg;
+                    border-radius: 5px;
+                    @include flexCenter();
+                    #browserTopPageFirstMain{
+                        @include size(93.25%, 17px);
+                        @include flexBetween();
+                        #browserTopPageFirstMainLeft{
+                            @include size(80%, 100%);
+                            @include flexStart();
+                            #browserTopPageFirstMainLeftPhoto{
+                                @include size(18px, 18px);
+                                @include flexCenter();
+                                img{
+                                    @include size(100%,100%);
+                                    object-fit: contain;
+                                    object-position: center;
+                                }
+                            }
+                            #browserTopPageFirstMainLeftInfo{
+                                @include size(85%, 100%);
+                                margin-left: 7px;
+                                @include flexStart();
+                                p{
+                                    font-size: 12px;
+                                    font-family: $sans;
+                                    color: $white;
+                                }
+                            }
+                        }
+                        #browserTopPageFirstMainClose{
+                            @include size(10px, 10px);
+                            @include flexCenter();
+                            cursor: pointer;
+                            p{
+                                font-size: 10px;
+                                font-family: $sans;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+            #browserTopCloseMinuse{
+                @include size(104px, 17px);
+                @include flexBetween();
+                i{
+                    font-size: 13px;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+            #browserTopSearch{
+                @include size(100%, 42px);
+                background-color: $browserSearchBg;
+                @include flexBetween();
+                #browserTopSearchLeft{
+                    @include size(120px, 16px);
+                    @include flexCenter();
+                    #browserTopSearchLeftMain{
+                        @include size(88px, 16px);
+                        @include flexBetween();
+                        i{
+                            font-size: 14px;
+                            color: $white;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                input{
+                    @include size(74.12%, 32px);
+                    background-color: $browser;
+                    border-radius: 5px;
+                    outline: none;
+                    padding-left: 1%;
+                    color: $browserUrl;
+                    font-size: 14px;
+                    border: none;
+                }
+                #browserTopSearchRight{
+                    @include size(157px, 16px);
+                    @include flexCenter();
+                    #browserTopSearchRightMain{
+                        @include size(122px, 16px);
+                        @include flexBetween();
+                        i{
+                            color: white;
+                            font-size: 14px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        #browserMain{
+            @include size(100%, 91%);
+            @include flexCenter();
+            img{
+                @include size(100%, 100%);
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+
+//Shut down style
+#shutDown{
+    @include size(100%, 100vh);
+    background-color: $black;
+    @include flexCenter();
+    display: none;
+    #shutDownMain{
+        @include size(200px, 200px);
+        @include flexCenter();
+        position: relative;
+        .downLoader{
+            @include size(150px, 150px);
+            position: absolute;
+            animation: rotate 3.2s linear infinite;
+            &:nth-child(1){
+                animation-delay: 0.15s;
+            }
+            &:nth-child(2){
+                animation-delay: 0.30s;
+            }
+            &:nth-child(3){
+                animation-delay: 0.45s;
+            }
+            &:nth-child(4){
+                animation-delay: 0.60s;
+            }
+            &:nth-child(5){
+                animation-delay: 0.75s;
+            }
+            &:nth-child(6){
+                animation-delay: 0.90s;
+            }
+            .downLoaderElement{
+                @include size(8px, 8px);
+                border-radius: 50%;
+                background-color: $white;
+                position: relative;
+                top: 25px;
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+//Tetris style
+#containerTetris{
+    @include size(100%, 100vh);
+    background: url(../Tetris/CSS/IMG/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flexCenter();
+    position: absolute;
+    top: 0;
+    #mainTetris{
+        @include size(930px, 884px);
+        background-color: $tetrisBg;
+        border: 8px solid $border;
+        border-radius: 20px ;
+        @include flexAround();
+        #menu{
+            @include size(400px, 800px);
+            @include flDownAround();
+            align-items: flex-start;
+            p{
+                @include size(400px, 45px);
+                font-size: 40px;
+                font-weight: bold;
+                color: $border;
+                &:nth-child(2){
+                    @include size(200px, 200px);
+                    canvas{
+                        @include size(200px, 200px);
+                        border: 2px solid $border;
+                        border-radius: 10px;
+                    }
+                }
+                span{
+                    color: $white;
+                }
+            }
+        }
+        #canvas{
+            @include size(404px, 804px);
+            background: url(../Tetris/CSS/IMG/image-asset.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border: 2px solid $border;
+            border-radius: 10px;
+            box-shadow: 0 0 15px $black;
+        }
+    }
+    #close{
+        @include size(60px, 60px);
+        @include flexCenter();
+        transition: .2s;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover{
+            background-color: $red;
+        }
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        p{
+            font-size: 50px;
+            color: $white;
+            margin-bottom: 10%;
+            text-decoration: none;
+        }
+    }
+}
